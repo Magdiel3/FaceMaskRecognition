@@ -20,10 +20,10 @@ while True:
     
     # Detect the faces in the image
     faces = faceCascade.detectMultiScale(gray,
-                                         scaleFactor=1.1,
-                                         minNeighbors=5,
-                                         minSize=(60, 60),
-                                         flags=cv2.CASCADE_SCALE_IMAGE)
+                                         scaleFactor=1.1,           # Parameter specifying how much the image size is reduced at each image scale. [1.05]
+                                         minNeighbors=5,            # Parameter specifying how many neighbours each candidate rectangle should have to retain it. [3~6]
+                                         minSize=(60, 60),          # Minimum possible object size. Objects smaller than that are ignored.
+                                         flags=cv2.CASCADE_SCALE_IMAGE) # Mode of operation
 
     # Draw a rectangle around every detected face
     for (x,y,w,h) in faces:
