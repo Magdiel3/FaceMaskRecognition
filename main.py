@@ -25,9 +25,10 @@ while True:
                                          minSize=(60, 60),          # Minimum possible object size. Objects smaller than that are ignored.
                                          flags=cv2.CASCADE_SCALE_IMAGE) # Mode of operation
 
-    # Draw a rectangle around every detected face
+    # Draw a rectangle around every detected face and add label
     for (x,y,w,h) in faces:
         cv2.rectangle(frame, (x, y), (x + w, y + h),(0,255,0), 2)
+        cv2.putText(frame, 'FACE', (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (36,255,12), 2)
 
     # Display image
     cv2.imshow('Video', frame)
