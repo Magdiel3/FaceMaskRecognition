@@ -18,7 +18,7 @@ For ease of the setup and configuration, one can easely run the ´setup.sh´ onc
     chmod +x setup.sh
     ./setup.sh
 
-If you prefer a manual setup, you can run the following after [cloning](Cloning) and run the following commands.
+If you prefer a manual setup, you can run the following after cloning and run the following commands.
 
     virtualenv venv
     source venv/bin/Activate
